@@ -1,7 +1,7 @@
 {
   "selected_model": "Multinomial Naive Bayes",
   "selection_criteria": "Prioritized Spam Class F1-Score (60%) and Spam Precision (40%) to maximize fraud detection while minimizing false positive misclassifications of legitimate SMS.",
-  "training_date": "2026-11-02 12:33:49",
+  "training_date": "2026-11-02 12:44:56",
   "dataset_info": {
     "dataset_source": "SMS Spam Collection (UCI Machine Learning Repository)",
     "raw_samples": 5574,
