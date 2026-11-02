@@ -1,0 +1,161 @@
+{
+  "selected_model": "Multinomial Naive Bayes",
+  "selection_criteria": "Prioritized Spam Class F1-Score (60%) and Spam Precision (40%) to maximize fraud detection while minimizing false positive misclassifications of legitimate SMS.",
+  "training_date": "2026-11-02 12:33:49",
+  "dataset_info": {
+    "dataset_source": "SMS Spam Collection (UCI Machine Learning Repository)",
+    "raw_samples": 5574,
+    "clean_unique_samples": 5148,
+    "duplicates_removed": 414,
+    "train_samples": 4118,
+    "test_samples": 1030,
+    "train_spam_count": 513,
+    "train_ham_count": 3605,
+    "test_spam_count": 128,
+    "test_ham_count": 902,
+    "vocabulary_size": 5000
+  },
+  "tfidf_parameters": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "max_features": 5000,
+    "min_df": 2,
+    "max_df": 0.95,
+    "sublinear_tf": true
+  },
+  "all_models_metrics": {
+    "Multinomial Naive Bayes": {
+      "accuracy": 0.9854,
+      "spam_precision": 0.9829,
+      "spam_recall": 0.8984,
+      "spam_f1": 0.9388,
+      "ham_precision": 0.9858,
+      "ham_recall": 0.9978,
+      "ham_f1": 0.9917,
+      "macro_f1": 0.9653,
+      "weighted_f1": 0.9852,
+      "confusion_matrix": [
+        [
+          900,
+          2
+        ],
+        [
+          13,
+          115
+        ]
+      ],
+      "tn": 900,
+      "fp": 2,
+      "fn": 13,
+      "tp": 115,
+      "classification_report": {
+        "Ham (Legit)": {
+          "precision": 0.9857612267250822,
+          "recall": 0.9977827050997783,
+          "f1-score": 0.9917355371900827,
+          "support": 902.0
+        },
+        "Spam": {
+          "precision": 0.9829059829059829,
+          "recall": 0.8984375,
+          "f1-score": 0.9387755102040817,
+          "support": 128.0
+        },
+        "accuracy": 0.9854368932038835,
+        "macro avg": {
+          "precision": 0.9843336048155324,
+          "recall": 0.9481101025498891,
+          "f1-score": 0.9652555236970821,
+          "support": 1030.0
+        },
+        "weighted avg": {
+          "precision": 0.9854064003087281,
+          "recall": 0.9854368932038835,
+          "f1-score": 0.9851540969432787,
+          "support": 1030.0
+        }
+      }
+    },
+    "Logistic Regression": {
+      "accuracy": 0.9874,
+      "spam_precision": 0.9675,
+      "spam_recall": 0.9297,
+      "spam_f1": 0.9482,
+      "ham_precision": 0.9901,
+      "ham_recall": 0.9956,
+      "ham_f1": 0.9928,
+      "macro_f1": 0.9705,
+      "weighted_f1": 0.9873,
+      "confusion_matrix": [
+        [
+          898,
+          4
+        ],
+        [
+          9,
+          119
+        ]
+      ],
+      "tn": 898,
+      "fp": 4,
+      "fn": 9,
+      "tp": 119,
+      "classification_report": {
+        "Ham (Legit)": {
+          "precision": 0.9900771775082691,
+          "recall": 0.9955654101995566,
+          "f1-score": 0.9928137092316197,
+          "support": 902.0
+        },
+        "Spam": {
+          "precision": 0.967479674796748,
+          "recall": 0.9296875,
+          "f1-score": 0.9482071713147411,
+          "support": 128.0
+        },
+        "accuracy": 0.987378640776699,
+        "macro avg": {
+          "precision": 0.9787784261525085,
+          "recall": 0.9626264550997783,
+          "f1-score": 0.9705104402731803,
+          "support": 1030.0
+        },
+        "weighted avg": {
+          "precision": 0.9872689441615946,
+          "recall": 0.987378640776699,
+          "f1-score": 0.9872703724807843,
+          "support": 1030.0
+        }
+      }
+    }
+  },
+  "top_spam_features": [
+    "call phone_token",
+    "phone_token",
+    "claim",
+    "prize",
+    "tone",
+    "guarante",
+    "currency_token prize",
+    "url_token",
+    "rington",
+    "currency_token cash",
+    "cs",
+    "poli",
+    "tri contact",
+    "prize guarante",
+    "weekli",
+    "stop phone_token",
+    "guarante call",
+    "valid",
+    "entri",
+    "phone_token currency_token",
+    "land line",
+    "txt stop",
+    "claim call",
+    "phone_token landlin",
+    "select receiv"
+  ]
+}

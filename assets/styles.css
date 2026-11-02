@@ -1,0 +1,221 @@
+/* =========================================================
+   SpamGuard NLP — Professional SaaS Theme Stylesheet
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --primary-navy: #0f172a;
+  --surface-navy: #1e293b;
+  --surface-card: #1e293b;
+  --border-subtle: #334155;
+  --accent-blue: #3b82f6;
+  --accent-blue-hover: #2563eb;
+  --spam-red: #ef4444;
+  --spam-red-bg: rgba(239, 68, 68, 0.12);
+  --ham-green: #10b981;
+  --ham-green-bg: rgba(16, 185, 129, 0.12);
+  --amber-warning: #f59e0b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --radius-lg: 12px;
+  --radius-md: 8px;
+}
+
+/* Global Font & Spacing */
+html, body, [class*="css"] {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-main);
+}
+
+code, pre {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* Hero Section */
+.hero-card {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid #334155;
+  border-radius: var(--radius-lg);
+  padding: 2.2rem 2.5rem;
+  margin-bottom: 1.8rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-card::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.18) 0%, rgba(59, 130, 246, 0) 70%);
+  pointer-events: none;
+}
+
+.hero-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 720px;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* KPI / Stat Cards */
+.stat-card {
+  background: #1e293b;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.4rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-blue);
+}
+
+.stat-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.stat-value {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.stat-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+  margin-top: 0.4rem;
+}
+
+/* Prediction Result Cards */
+.result-card-spam {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid #ef4444;
+  border-radius: var(--radius-lg);
+  padding: 1.8rem;
+  margin-top: 1.2rem;
+  box-shadow: 0 10px 25px -5px rgba(239, 68, 68, 0.2);
+}
+
+.result-card-ham {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid #10b981;
+  border-radius: var(--radius-lg);
+  padding: 1.8rem;
+  margin-top: 1.2rem;
+  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.2);
+}
+
+.result-badge-spam {
+  background: #ef4444;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 800;
+  padding: 0.35rem 1.1rem;
+  border-radius: 6px;
+  letter-spacing: 0.06em;
+  display: inline-block;
+}
+
+.result-badge-ham {
+  background: #10b981;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 800;
+  padding: 0.35rem 1.1rem;
+  border-radius: 6px;
+  letter-spacing: 0.06em;
+  display: inline-block;
+}
+
+/* Feature Pill Tag */
+.feature-tag {
+  display: inline-block;
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #93c5fd;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  margin-right: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.spam-tag {
+  display: inline-block;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  margin-right: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Sidebar Custom Styling */
+[data-testid="stSidebar"] {
+  background-color: #0b1120 !important;
+  border-right: 1px solid #1e293b;
+}
+
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] h1 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #f8fafc;
+}
+
+/* Buttons */
+.stButton > button {
+  border-radius: var(--radius-md) !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Informative Callout / Disclaimer */
+.disclaimer-box {
+  background: rgba(15, 23, 42, 0.8);
+  border-left: 4px solid var(--accent-blue);
+  padding: 0.9rem 1.2rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero-card {
+    padding: 1.5rem;
+  }
+  .hero-title {
+    font-size: 1.6rem;
+  }
+}
